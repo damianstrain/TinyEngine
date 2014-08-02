@@ -1,7 +1,5 @@
 package tiny.engine.core;
 
-import tiny.engine.utils.OsUtils;
-
 /**
  * @author Damian Strain
  */

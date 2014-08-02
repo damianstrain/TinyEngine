@@ -16,6 +16,11 @@ public final class About {
 
     /**
      * Initialises a new about dialog with no title or size.
+     *
+     * @param icon
+     * @param name
+     * @param version
+     * @param copyright
      */
     public void init(URL icon, String name, String version, String copyright) {
         dialog = new JDialog();
@@ -64,7 +69,7 @@ public final class About {
      */
     private JLabel getIcon(URL iconURL) {
         if (iconURL == null) {
-            iconURL = this.getClass().getResource("/gui/res/icon.png");
+            iconURL = this.getClass().getResource("/icon.png");
         }
         ImageIcon imageIcon = new ImageIcon(iconURL);
         JLabel label = new JLabel();
@@ -98,7 +103,7 @@ public final class About {
      */
     private JLabel getVersion(String version) {
         if (version == null || version.length() == 0) {
-            version = "Version 1.0.0";
+            version = "Version 0.0.0";
         }
         JLabel label = new JLabel(version);
         label.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -115,7 +120,7 @@ public final class About {
      */
     private JLabel getCopyright(String copyright) {
         if (copyright == null || copyright.length() == 0) {
-            copyright = "© 2013 Damian Strain. All rights reserved.";
+            copyright = "© 2014 Damian Strain. All rights reserved.";
         }
         JLabel label = new JLabel(copyright);
         label.setAlignmentX(Component.CENTER_ALIGNMENT);

@@ -20,7 +20,12 @@ public final class Window {
     private boolean isFullScreen = false;
 
     /**
-     * Initialises a new window with a title, size and whether it is resizable.
+     * Initialises a new window with a title, size and whether it is re-sizable.
+     *
+     * @param title
+     * @param isResizable
+     * @param width
+     * @param height
      */
     public void init(String title, boolean isResizable, int width, int height) {
         frame = new JFrame();
@@ -56,7 +61,7 @@ public final class Window {
     /**
      * Sets whether the window can be re-sized.
      *
-     * @param isResizable true if resizable, false otherwise
+     * @param isResizable true if re-sizable, false otherwise
      */
     public void setResizable(boolean isResizable) {
         frame.setResizable(isResizable);

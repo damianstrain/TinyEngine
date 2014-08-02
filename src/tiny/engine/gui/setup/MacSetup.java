@@ -39,7 +39,7 @@ public final class MacSetup {
     }
 
     /**
-     * Sets the Swing "Titled" and "Inset" borders to use Mac OS X's native aqua
+     * Sets the Swing "Titled" and "Inset" borders to use Mac OSX native aqua
      * variant.
      */
     public static void setAquaBorders() {
@@ -55,6 +55,7 @@ public final class MacSetup {
      * Initialises and registers the appropriate menu handlers for Mac OS X's
      * screen menu bar.
      *
+     * @param window
      * @param about the about dialog to display
      * @param prefs the preferences dialog to display
      */
@@ -70,7 +71,7 @@ public final class MacSetup {
      */
     public static void setDockIcon(URL url) {
         if (url == null) {
-            url = Application.getApplication().getClass().getResource("/gui/res/icon.png");
+            url = Application.getApplication().getClass().getResource("/icon.png");
         }
         Image icon = Toolkit.getDefaultToolkit().getImage(url);
         Application.getApplication().setDockIconImage(icon);

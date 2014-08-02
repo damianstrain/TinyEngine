@@ -3,7 +3,6 @@ package tiny.engine.core;
 import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
-import java.io.IOException;
 import javax.imageio.ImageIO;
 import tiny.engine.input.Keyboard;
 import tiny.engine.input.Mouse;
@@ -30,8 +29,8 @@ public final class TestScreen extends GameScreen {
         mouseWheel = game.getInput().getMouseWheel();
 
         try {
-            sprite = ImageIO.read(game.getFileIO().loadFile().getResource("/Users/Damian/Desktop/spriteImage.gif"));
-        } catch (IOException e) {
+            sprite = ImageIO.read(game.getFileIO().loadFile().getResource("res/sprite.gif"));
+        } catch (Exception e) {
             e.printStackTrace();
         }
         //pacman = new Entity(sprite, 200, 200, true, 12, 1, 1000);
